@@ -1,0 +1,35 @@
+
+import { ROLES }
+from "./roles";
+
+import {
+  PERMISSIONS
+}
+from "./permissions";
+
+export const ACCESS_MATRIX = {
+
+  [ROLES.SUPER_ADMIN]:[
+    "*"
+  ],
+
+  [ROLES.ADMIN]:[
+    PERMISSIONS.USER_VIEW,
+    PERMISSIONS.USER_CREATE,
+    PERMISSIONS.USER_EDIT,
+    PERMISSIONS.DASHBOARD_VIEW,
+    PERMISSIONS.REPORT_VIEW,
+  ],
+
+  [ROLES.MANAGER]:[
+    PERMISSIONS.USER_VIEW,
+    PERMISSIONS.DASHBOARD_VIEW,
+    PERMISSIONS.REPORT_VIEW,
+  ],
+
+  [ROLES.EMPLOYEE]:[
+    PERMISSIONS.DASHBOARD_VIEW,
+  ],
+
+  [ROLES.USER]:[],
+};

@@ -1,0 +1,11 @@
+
+export const QUERY_KEYS = {
+
+  USERS:["USERS"],
+
+  PROFILE:["PROFILE"],
+
+  DASHBOARD:["DASHBOARD"],
+
+  REPORTS:["REPORTS"],
+};
